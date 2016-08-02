@@ -1,8 +1,10 @@
-function populatePage (inventory) {console.log("hi")
-  // Loop over the inventory and populate the page
-
+// states the name of the function
+function populatePage (inventory) {
+  // state the needed variables
   var carList = document.querySelector(".container")
+
   var output ="";
+  // Loop over the inventory and populate the page
 for (var i=0; i < inventory.cars.length; i++)
   var currentCar = inventory[i];
   CarList.innerHTML+= '<div>${currentCar.item}</div>'
