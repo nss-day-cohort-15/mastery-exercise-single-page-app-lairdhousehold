@@ -6,9 +6,9 @@ function populatePage (inventory) {
   // Loop over the inventory and populate the page
   for (var i=0; i < inventory.cars.length; i++){
     if (inventory[i].purchased === false) {
-      var purchased = <div class="for sale">For sale!</div>
+      var purchased = '<div class="for sale">For sale!</div>'
 } else{
-      var purchased = <div class="sold">Sorry Sold!</div>
+      var purchased = '<div class="sold">Sorry Sold!</div>'
 }
 
 
