@@ -1,34 +1,34 @@
-// var container = document.getElementByID("carContainer");
-// var textInput = document.getElementByID("text-input");
-// var submit = document.getElementByID("submit");
+// var container = document.getElementById("carContainer");
+// var textInput = document.getElementById("text-input");
+// var submit = document.getElementById("submit");
 // // states the name of the function
 function populatePage (inventory) {
   // state the needed variables
-  var carList = document.getElementByID(".cards")
+  var carList = document.getElementById("output")
   var output ="";
-  console.log("got this far")
+  console.log("got this far", inventory)
   // Loop over the inventory and populate the page
-  Inventory.Foreach(function(currentCar, idx){
+  inventory.forEach(function(currentCar, idx){
     if (idx % 3 === 0){
-      output += '<div class="row">';
+      carList.innerHTML  += '<div class="row">';
     }
-    output += '<div class"col-md-4 car">';
-    output += '<h4> ${currentCar.year} ${currentCar.make} ${currentCar.model}</h4>';
+    carList.innerHTML  += '<div class"col-md-4 car">';
+    carList.innerHTML  += `<h4> ${currentCar.year} ${currentCar.make} ${currentCar.model}</h4>`;
 
 
 
     if (currentCar.purchased === false){
-      output += '<h4>For Sale!</h4>';
+      carList.innerHTML  += '<h4>For Sale!</h4>';
     } else {
       output += '<p>Sorry, Out of Stock</p>';
     };
 
-    output += '<p>${currentCar.description}</p>';
-    output += '<div>';
+    carList.innerHTML  += `<p>${currentCar.description}</p>`;
+    carList.innerHTML  += '<div>';
 });
-container.innerHtml += output;
+// container.innerHTML += output;
 
-var cars = document.getElemntByID("cars")
+var cars = document.getElementsByClassName("cars")
 
 for (var i=0; i <cars.length; i++) {
   var car = cars[i];
@@ -37,6 +37,7 @@ for (var i=0; i <cars.length; i++) {
 
   CarLot.activateEvents();
 }
+  console.log(CarLot)
   CarLot.loadInventory(populatePage);
   // };
   // console.log('I ran');
