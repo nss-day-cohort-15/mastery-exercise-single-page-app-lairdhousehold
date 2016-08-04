@@ -10,23 +10,23 @@ function populatePage (inventory) {
   // Loop over the inventory and populate the page
   inventory.forEach(function(currentCar, idx){
     if (idx % 3 === 0){
-      carList.innerHTML  += '<div class="row">';
+      output  += '<div class="row">';
     }
-    carList.innerHTML  += '<div class"col-md-4 car">';
-    carList.innerHTML  += `<h4> ${currentCar.year} ${currentCar.make} ${currentCar.model}</h4>`;
+    output  += '<div class="col-md-4 car">';
+    output  += `<h4> ${currentCar.year} ${currentCar.make} ${currentCar.model}</h4>`;
 
 
 
     if (currentCar.purchased === false){
-      carList.innerHTML  += '<h4>For Sale!</h4>';
+      output  += '<h4>For Sale!</h4>';
     } else {
       output += '<p>Sorry, Out of Stock</p>';
     };
 
-    carList.innerHTML  += `<p>${currentCar.description}</p>`;
-    carList.innerHTML  += '<div>';
+    output  += `<p>${currentCar.description}</p>`;
+    output  += '</div>';
 });
-// container.innerHTML += output;
+carList.innerHTML = output;
 
 var cars = document.getElementsByClassName("cars")
 
