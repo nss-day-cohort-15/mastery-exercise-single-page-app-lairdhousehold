@@ -6,7 +6,7 @@
       "year": "2001",
       "price": "4000",
       "color": "Green",
-      "purchased": false,
+      "purchased": true,
       "description": "This old school ride pumps the power while the pure and immaculate frame of elderly people stroke scropians in the dark"
     },
     {

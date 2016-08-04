@@ -4,7 +4,7 @@
 // // states the name of the function
 function populatePage (inventory) {
   // state the needed variables
-  var carList = document.getElementById("output")
+  var carList = document.getElementById("car_cards")
   var output ="";
   console.log("got this far", inventory)
   // Loop over the inventory and populate the page
