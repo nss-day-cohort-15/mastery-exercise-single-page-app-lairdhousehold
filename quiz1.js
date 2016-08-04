@@ -9,7 +9,7 @@ function populatePage (inventory) {
     if (idx % 3 === 0){
       output  += '<div class="row">';
     }
-    output  += '<div class="col-sm-4 car cards">';
+    output  += '<div class="col-sm-4 cards">';
     output  += `<h4> ${currentCar.year} ${currentCar.make} ${currentCar.model}</h4>`;
 
 
