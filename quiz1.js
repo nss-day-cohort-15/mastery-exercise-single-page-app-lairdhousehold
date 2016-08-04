@@ -1,9 +1,6 @@
-// var container = document.getElementById("carContainer");
-// var textInput = document.getElementById("text-input");
-// var submit = document.getElementById("submit");
-// // states the name of the function
+
 function populatePage (inventory) {
-  // state the needed variables
+
   var carList = document.getElementById("car_cards")
   var output ="";
   console.log("got this far", inventory)
@@ -12,7 +9,7 @@ function populatePage (inventory) {
     if (idx % 3 === 0){
       output  += '<div class="row">';
     }
-    output  += '<div class="col-md-4 car">';
+    output  += '<div class="col-sm-4 car cards">';
     output  += `<h4> ${currentCar.year} ${currentCar.make} ${currentCar.model}</h4>`;
 
 
@@ -28,9 +25,9 @@ function populatePage (inventory) {
 });
 carList.innerHTML = output;
 
-var cars = document.getElementsByClassName("cars")
+  var cars = document.getElementsByClassName("cards")
 
-for (var i=0; i <cars.length; i++) {
+  for (var i=0; i <cars.length; i++) {
   var car = cars[i];
   car.style.borderColor = inventory[i].color;
  }
@@ -39,8 +36,4 @@ for (var i=0; i <cars.length; i++) {
 }
   console.log(CarLot)
   CarLot.loadInventory(populatePage);
-  // };
-  // console.log('I ran');
-// Load the inventory and send a callback function to be
-// invoked after the process is complete
-// CarLot.loadInventory();
+

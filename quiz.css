@@ -1,18 +1,19 @@
 
-.cars {
-
+.cards {
   border: 2px solid;
-  overflow: scroll;
   padding: 0.5%;
   float: auto
 
-}
 
+}
+body {background-color: brown;
+
+}
 .row {
 
-    padding: 1%;
-    display: inline-block;
-    float: auto
+  padding: 1%;
+  display: inline-block;
+  float: auto
 }
 
 .selected {
@@ -22,3 +23,8 @@
 .hidden {
   display: none;
 
+/*.cars {
+  border: 2px solid;
+}
+
+*/
