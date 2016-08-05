@@ -1,28 +1,16 @@
-function startEvents (inventory){
-  var Selectedcars
-  var input = document.getElementId= ('input')
-  document.querySelector('cards').addEventListener('click', function(event){
+var CarLot =(function(originalLot){
+  var input1 = document.getElementById("input");
+  var button = document.getElementById("button");
+  var container1 = document.getElementById("container");
+  var inputString;
+  var selectedCard = '';
+  originalLot.activateEvents = function(){
 
-    if (event.target.classname ==="cards"){
-      Selectedcars = event.target.parentElement
-      Selectedcars.style.backgroundColor = "beige"
-      Selectedcars.style.borderWidth = "10px"
-      input.value =''
-      input.focus = ()
-      input.addEventlistener('keypress', function(event){
-        Selectedcars.innerHTML += input.value;
-        input.value =''
-        Selectedcars.style.backgroundColor = "white"
-        Selectedcars.style.borderWidth = "5px"
-
-
-
-      }
-        )
-      }
-
-    }
-
-  })
-
-}
+    var cardArray = document.getElementByClassname(cars)
+    for (var i = 0; i < carArray.length; i++){
+      cardx = carArray[i];
+        cardx.addEventListner('click', function(event){
+      });
+    };
+  };
+  )};

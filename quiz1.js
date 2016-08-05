@@ -9,8 +9,10 @@ function populatePage (inventory) {
     if (idx % 3 === 0){
       output  += '<div class="row">';
     }
-    output  += '<div class="col-sm-4 cards">';
+    output  += '<div id="rotating_div" class="col-sm-3 cards img-hover">';
     output  += `<h4> ${currentCar.year} ${currentCar.make} ${currentCar.model}</h4>`;
+    output  += `<h5> ${currentCar.color}</h5>`;
+    output  += `<h5> $${currentCar.price}</h5>`;
 
 
 
@@ -32,7 +34,7 @@ carList.innerHTML = output;
   car.style.borderColor = inventory[i].color;
  }
 
-  CarLot.activateEvents();
+  // CarLot.activateEvents();
 }
   console.log(CarLot)
   CarLot.loadInventory(populatePage);
