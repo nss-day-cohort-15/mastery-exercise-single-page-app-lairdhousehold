@@ -1,16 +1,30 @@
-var CarLot =(function(originalLot){
-  var input1 = document.getElementById("input");
-  var button = document.getElementById("button");
-  var container1 = document.getElementById("container");
-  var inputString;
-  var selectedCard = '';
-  originalLot.activateEvents = function(){
+var CarLot = (function(originalLot){
+      var input = document.getElementById("input");
+      var button = document.getElementById("button");
+      var inputString;
+      var selectedCard = '';
+      var cars = document.getElementById("x")
+    console.log(originalLot)
 
-    var cardArray = document.getElementByClassname(cars)
-    for (var i = 0; i < carArray.length; i++){
-      cardx = carArray[i];
-        cardx.addEventListner('click', function(event){
-      });
-    };
+      originalLot.activateEvents = function(){
+        for (var i = 0; i < cars.length; i++){
+        cardx = cars[i];
+        cardx.addEventListener("click", function(event){
+          console.log('clicked')
+          var CurrentCar = event.currentTarget;
+          cardx.addEventListener("click", CarLot.addUnselectClass);
+          cardx.addEventListener("click", function(event){
+            CarLot.addSelected
+          })
+        }
+
+            // console.log('peanuts'), false
+
+console.log('peanuts')
+
   };
-  )};
+}
+})
+(CarLot || {});
+// console.log("finished")
+
