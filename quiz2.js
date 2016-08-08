@@ -1,8 +1,8 @@
 var CarLot = (function(originalLot){
       var input = document.getElementById("input");
       var button = document.getElementById("button");
-      var inputString;
-      var selectedCard = '';
+
+
       var cars = document.getElementsByClassName("cards")
     console.log(cars)
 
@@ -10,12 +10,19 @@ var CarLot = (function(originalLot){
         for (var i = 0; i < cars.length; i++){
         cardx = cars[i];
         cardx.addEventListener("click", function(event){
-          console.log('clicked')
+
+
           var CurrentCar = event.currentTarget;
-          cardx.addEventListener("click", CarLot.addUnselectClass);
-          cardx.addEventListener("click", function(event){
-            CarLot.addSelected
-          })
+          CurrentCar.addEventListener("click", CurrentCar.style.borderWidth ="10px")
+          CurrentCar.addEventListener("click",input.value ='')
+          CurrentCar.addEventListener("click",input.focus())
+          CurrentCar.innerHTML += input.value;
+          input.value =''
+          // cardx.addEventListener("click", cardx.classlist.add("Selected'))
+          // {
+
+          //   CurrentCar.addSelectedClass
+          // })
 
 
             // console.log('peanuts'), false
