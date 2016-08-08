@@ -3,8 +3,8 @@ var CarLot = (function(originalLot){
       var button = document.getElementById("button");
       var inputString;
       var selectedCard = '';
-      var cars = document.getElementById("x")
-    console.log(originalLot)
+      var cars = document.getElementsByClassName("cards")
+    console.log(cars)
 
       originalLot.activateEvents = function(){
         for (var i = 0; i < cars.length; i++){
@@ -16,15 +16,18 @@ var CarLot = (function(originalLot){
           cardx.addEventListener("click", function(event){
             CarLot.addSelected
           })
-        }
+
 
             // console.log('peanuts'), false
 
 console.log('peanuts')
 
-  };
-}
+    //
+// }
 })
-(CarLot || {});
+      }
+    }
+    return originalLot
+      })(CarLot || {});
 // console.log("finished")
 
