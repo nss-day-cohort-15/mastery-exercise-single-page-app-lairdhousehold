@@ -11,13 +11,13 @@ var CarLot = (function(originalLot){
         cardx = cars[i];
         cardx.addEventListener("click", function(event){
 
-
           var CurrentCar = event.currentTarget;
           CurrentCar.addEventListener("click", CurrentCar.style.borderWidth ="10px")
-          CurrentCar.addEventListener("click",input.value ='')
+
+          // CurrentCar.addEventListener("mouseout",CurrentCar.style.borderWidth ="2px")
           CurrentCar.addEventListener("click",input.focus())
-          CurrentCar.innerHTML += input.value;
           input.value =''
+       CurrentCar.innerHTML += input.value;
           // cardx.addEventListener("click", cardx.classlist.add("Selected'))
           // {
 
