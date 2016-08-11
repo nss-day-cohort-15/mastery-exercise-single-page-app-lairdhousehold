@@ -1,31 +1,37 @@
 var CarLot = (function(originalLot){
+
       var input = document.getElementById("input");
-      var button = document.getElementById("button");
+      var text = document.getElementById("des");
+      var CurrentCar;
+
+
 
 
       var cars = document.getElementsByClassName("cards")
-    console.log(cars)
+        console.log(cars)
 
       originalLot.activateEvents = function(){
         for (var i = 0; i < cars.length; i++){
         cardx = cars[i];
-        cardx.addEventListener("click", function(event){
+        cardx.addEventListener("click", function(){
+        var CurrentCar = event.currentTarget;
+        CurrentCar.classList.toggle('selected')
+        input.removeAttribute('disabled')
+        input.focus();
+        // console.log(text.value)
 
-          var CurrentCar = event.currentTarget;
-          CurrentCar.addEventListener("click", CurrentCar.style.borderWidth ="10px")
+        input.addEventListener("keyup", function(){
+          if (event.keycode === 13){
+        input.value = "";
+        description = CurrentCar.lastChild
 
-          // CurrentCar.addEventListener("mouseout",CurrentCar.style.borderWidth ="2px")
-          CurrentCar.addEventListener("click",input.focus())
-          input.value =''
-       CurrentCar.innerHTML += input.value;
-          // cardx.addEventListener("click", cardx.classlist.add("Selected'))
-          // {
-
-          //   CurrentCar.addSelectedClass
-          // })
+            // CurrentCar.lastChild = input.value
+          }
+        })
 
 
-            // console.log('peanuts'), false
+
+
 
 console.log('peanuts')
 

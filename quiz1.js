@@ -23,7 +23,7 @@ function populatePage (inventory) {
       output += '<p>Sorry, Out of Stock</p>';
     };
 
-    output  += `<p Id="dec">${currentCar.description}</p>`;
+    output  += `<p Id="des">${currentCar.description}</p>`;
     output  += '</div>';
 });
     carList.innerHTML = output;
