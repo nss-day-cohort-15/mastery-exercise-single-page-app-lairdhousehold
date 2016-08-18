@@ -1,10 +1,10 @@
-var CarLot = (function(eventHandlers ){
+var CarLot = (function(addEventListenerHandlers ){
 
       var input = document.getElementById("input");
-      // var text = document.getElementById("des");
       var CurrentCar;
       var selectedCar;
-      var editedCar
+      var text;
+      var cardx;
 
 
 
@@ -15,13 +15,24 @@ var CarLot = (function(eventHandlers ){
       for (var i = 0; i < cars.length; i++){
       cardx = cars[i];
       cardx.addEventListener("click", function(){
-      CurrentCar = event.currentTarget
-      input.removeAttribute('disabled')
-      CarLot.deselectElements();
-      input.focus();
+        CurrentCar = event.currentTarget
+        input.removeAttribute('disabled')
+        CarLot.highlightElement(event.currentTarget, "yellow")
+        CarLot.deselectElements();
+        input.focus();
     });
 
-    input.addEventListener
+    input.addEventListener("keyup", function (){
+      if (event.keycode===13){
+        input.value ="";
+      }
+
+      if (currentCar.className ==="col-sm-3 cards"){
+        text = CurrentCar.lastchild;
+        var userInput = text.value
+        text.innerText = userInput
+      }
+    })
 
         // var CurrentCar = event.currentTarget;
         // CurrentCar.classList.toggle('selected')
@@ -29,8 +40,8 @@ var CarLot = (function(eventHandlers ){
 
         input.addEventListener("keyup", function(){
           if (event.keycode === 13){
-        input.value = "";
-        text.lastChild.innerText = input.value
+          input.value = "";
+          text.lastChild.innerText = input.value
 
           }
         })
@@ -43,7 +54,8 @@ console.log('peanuts')
 
 
   })
-  }
-}return originalLot
+//   }
+}
+return originalLot
 })(CarLot || {});
 
