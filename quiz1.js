@@ -20,7 +20,7 @@ function populatePage (inventory) {
     if (currentCar.purchased === false){
       output  += '<h4>For Sale!</h4>';
     } else {
-      output += '<p>Sorry, Out of Stock</p>';
+      output += '<h4>Sorry, Out of Stock</h4>';
     };
 
     output  += `<p Id="des">${currentCar.description}</p>`;
